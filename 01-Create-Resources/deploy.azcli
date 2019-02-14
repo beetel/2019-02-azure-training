@@ -1,0 +1,7 @@
+az login
+az account set --subscription "b33f0285-db27-4896-ac5c-df22004b0aba"
+
+az group create --name az-training --location westeurope
+
+az group deployment create --resource-group az-training --template-file azuredeploy.json --parameters webAppName=aztrain-webapp
+
